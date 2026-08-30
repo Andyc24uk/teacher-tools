@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102833" />
+  <title>Teacher Tools</title>
+  <meta name="description" content="A simple launcher for useful teacher utilities." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="grid-lines"></div>
+    <div class="scribble scribble-one">∿</div>
+    <div class="scribble scribble-two">✦</div>
+    <div class="scribble scribble-three">⌁</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <span>TT</span>
+        </div>
+        <div>
+          <p class="eyebrow">TEACHER TOOLKIT</p>
+          <h1>Teacher Tools</h1>
+          <p class="tagline">Small tools for annoying teacher jobs.</p>
+        </div>
+      </div>
+
+      <div class="header-status">
+        <span id="toolCount" class="count-pill"></span>
+        <span id="devBadge" class="dev-badge" hidden>Developer Mode</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Tool filters">
+      <label class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search tools…"
+          autocomplete="off"
+          aria-label="Search tools"
+        />
+        <button id="clearSearch" class="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+      </label>
+
+      <div id="categoryFilters" class="category-filters" aria-label="Categories"></div>
+    </section>
+
+    <section id="emptyState" class="empty-state" hidden>
+      <div class="empty-icon">⌕</div>
+      <h2>No tools found</h2>
+      <p>Try another search or category.</p>
+    </section>
+
+    <section id="toolGrid" class="tool-grid" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Useful little things, all in one place.</p>
+      <button
+        id="devToggle"
+        class="dev-toggle"
+        type="button"
+        aria-label="Developer options"
+        title="Developer options"
+      >&lt;/&gt;</button>
+    </div>
+  </footer>
+
+  <script src="tools.js"></script>
+</body>
+</html>
